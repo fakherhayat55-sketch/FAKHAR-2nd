@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حکومتِ پنجاب — روزگار اطلاعاتی سیل</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
+*{box-sizing:border-box}
+body{margin:0;padding:16px 10px;background:#eef2ee}
+.paper{max-width:760px;margin:0 auto;background:#fff;color:#12211a;font-family:"Poppins",system-ui,sans-serif;font-size:14px;line-height:1.55;border-radius:14px;overflow:hidden;border:1px solid #dfe8e2}
+.ur{font-family:"Noto Nastaliq Urdu",serif;direction:rtl;line-height:2}
+.wrap{max-width:700px;margin:0 auto;padding:0 18px}
+.topbar{background:#01300f;color:#cfe6d6;font-size:12px;padding:7px 0}
+.topbar-in{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.tb-left{display:flex;align-items:center;gap:7px}
+.dot{width:7px;height:7px;border-radius:50%;background:#39b54a;display:inline-block}
+.hero{background:linear-gradient(160deg,#01380f 0%,#0a6b2e 58%,#0e7c36 100%);color:#fff;padding:20px 0 26px;position:relative}
+.hero:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:16px 16px;pointer-events:none}
+.cmwrap{text-align:center;margin-bottom:12px;position:relative;z-index:2}
+.cmphoto{width:200px;height:250px;margin:0 auto 8px;border-radius:12px;overflow:hidden;border:3px solid #ffd84d;box-shadow:0 8px 26px rgba(0,0,0,.42)}
+.cmphoto img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.cmcap{font-size:12px;color:#e7f3e8;line-height:1.8}
+.cmcap b{color:#ffd84d;font-size:14px}
+.badge{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#eaf6ec;font-size:11px;padding:2px 12px;border-radius:20px;margin-bottom:9px;position:relative;z-index:2}
+.hero h1{font-size:21px;line-height:2;margin:0 0 6px;font-weight:700;position:relative;z-index:2;text-align:center}
+.quote{margin:0 0 10px;color:#ffe9a3;font-size:12.5px;text-align:center;position:relative;z-index:2}
+.sub{margin:0 0 14px;color:#d8ecd9;font-size:13px;position:relative;z-index:2;text-align:center}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 auto 15px;max-width:470px;position:relative;z-index:2}
+.stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:9px;padding:6px 4px;text-align:center}
+.stat b{display:block;font-size:16px;color:#ffd84d}
+.stat span{font-size:10.5px;color:#d5e9d7;line-height:1.9}
+.cta{display:block;width:fit-content;margin:0 auto;background:#ffd84d;color:#01300f;font-weight:700;text-decoration:none;padding:7px 26px;border-radius:8px;font-size:14px;position:relative;z-index:2;line-height:2}
+.note{background:#fff8e1;border:1px solid #f0dc9c;border-right:4px solid #c9a227;border-radius:8px;padding:10px 13px;font-size:12.5px;margin:16px 0 4px;color:#4a3c0d}
+.sec-h{font-size:16px;margin:20px 0 9px;padding-bottom:4px;border-bottom:2px solid #01411c;color:#01300f}
+.sec-h small{font-weight:400;color:#6b7c72;font-size:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.dcard{display:flex;justify-content:space-between;align-items:center;gap:8px;border:1px solid #e3ebe5;border-right:3px solid #c9a227;border-radius:8px;padding:8px 11px;background:#fbfdfb}
+.dcard .nm{font-weight:600;font-size:12.8px}
+.dcard .pt{font-size:10.5px;color:#6b7c72}
+.dcard .seats{background:#01411c;color:#fff;font-weight:700;font-size:12px;padding:2px 9px;border-radius:20px;white-space:nowrap}
+.total-row{display:flex;justify-content:space-between;align-items:center;background:#01300f;color:#fff;padding:8px 14px;border-radius:8px;margin-top:9px;font-size:13.5px;font-weight:600}
+.total-row b{color:#ffd84d;font-size:16px}
+.elig{border:1px solid #e3ebe5;border-radius:8px;overflow:hidden}
+.erow{display:flex;gap:12px;padding:5px 12px;font-size:12.5px;border-bottom:1px solid #eef3ef;align-items:center}
+.erow:last-child{border-bottom:0}
+.erow span{min-width:82px;color:#6b7c72}
+.erow b{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{background:#eef5ef;border:1px solid #d6e5d9;color:#1d4b2c;font-size:12px;padding:2px 11px;border-radius:20px;line-height:1.9}
+.form-card,.share-card,.fee-card,.done{border:1px solid #dfe8e2;border-radius:12px;margin-top:18px;overflow:hidden;background:#fff}
+.fc-head{background:#f4f8f4;border-bottom:1px solid #e3ebe5;padding:10px 15px}
+.fc-head h3{margin:0;font-size:15.5px;color:#01300f;line-height:1.9}
+.fc-head p{margin:0;font-size:12px;color:#5b6b62}
+.fbody{padding:15px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+label{display:block;font-size:12px;font-weight:600;color:#3c4b42;margin-bottom:9px}
+label small{display:block;font-size:10px;font-weight:400;color:#8b9a91;line-height:1.5;margin-top:1px}
+label i{color:#c0392b;font-style:normal}
+input,select,textarea{width:100%;margin-top:3px;padding:8px 10px;border:1px solid #d7e1da;border-radius:7px;font-family:"Poppins",sans-serif;font-size:13px;color:#12211a;background:#fff;font-weight:400}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#0a6b2e;box-shadow:0 0 0 3px rgba(10,107,46,.1)}
+.upl{margin:2px 0 12px}
+.upl-head{font-size:12.5px;font-weight:600;color:#3c4b42}
+.upl-sub{font-size:11.5px;color:#6b7c72;margin:0 0 7px}
+.upl-box{border:1.5px dashed #b9cdbf;border-radius:9px;padding:14px;text-align:center;background:#fafcfb;cursor:pointer;display:block}
+.upl-box:hover{border-color:#0a6b2e;background:#f4faf5}
+.upl-ico{display:block;font-size:19px;color:#0a6b2e}
+.upl-box b{display:block;font-size:12.5px;color:#1d4b2c;line-height:1.9}
+.upl-box small{font-size:11px;color:#7c8a80;line-height:1.9}
+.upl-box input{display:none}
+.upl-prev{margin-top:8px}
+.upl-prev img{max-width:150px;border-radius:7px;border:1px solid #dfe8e2;display:block}
+.upl-prev .fn{font-size:11.5px;color:#1d4b2c;background:#eef5ef;border:1px solid #d6e5d9;padding:6px 10px;border-radius:7px;display:inline-block}
+.err{display:none;background:#fdecea;border:1px solid #f5c6c0;color:#a02c1e;font-size:12.5px;padding:8px 11px;border-radius:7px;margin-bottom:10px}
+.err.on{display:block}
+.btn-main{width:100%;background:#01411c;color:#fff;border:0;border-radius:8px;padding:8px 12px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;margin-top:2px;line-height:2}
+.btn-main:hover{background:#0a6b2e}
+.btn-main.locked{background:#a9b8ae;cursor:not-allowed}
+.tiny{font-size:11px;color:#7c8a80;margin:6px 0 0}
+.share-card{display:none}
+.share-card.on{display:block}
+.sc-head{padding:11px 15px 9px;background:#f4f8f4;border-bottom:1px solid #e3ebe5}
+.sc-badge{display:inline-block;background:#01411c;color:#fff;font-size:10.5px;font-weight:700;padding:1px 10px;border-radius:20px;margin-bottom:5px;line-height:1.9}
+.sc-head h3{margin:0;font-size:15.5px;color:#01300f;line-height:1.9}
+.sc-head p{margin:0;font-size:12px;color:#5b6b62}
+.segs{display:grid;grid-template-columns:repeat(15,1fr);gap:4px;padding:13px 15px 7px}
+.seg{height:9px;border-radius:3px;background:#e6ece7;transition:background .25s}
+.seg.on{background:#0a6b2e}
+.seg-info{display:flex;justify-content:space-between;padding:0 15px 11px;font-size:12px;color:#5b6b62;font-weight:600;align-items:center}
+.seg-info b{color:#0a6b2e}
+.sc-btns{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 15px}
+.btn-wa{background:#1eb954;color:#fff;border:0;border-radius:7px;padding:6px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;line-height:2}
+.btn-ghost{background:#fff;color:#01411c;border:1px solid #b9cdbf;border-radius:7px;padding:6px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;line-height:2}
+.btn-ghost:hover{background:#f4faf5}
+.sc-note{font-size:12px;color:#7c8a80;padding:7px 15px 0;margin:0}
+.sc-note.ok{color:#0a6b2e;font-weight:600}
+.share-card .btn-main{margin:10px 15px 15px;width:calc(100% - 30px)}
+.fee-card{display:none}
+.fee-card.on{display:block}
+.fee-amt{display:flex;justify-content:space-between;align-items:center;background:#01300f;color:#fff;padding:8px 15px;font-size:13.5px;font-weight:600}
+.fee-amt b{color:#ffd84d;font-size:18px}
+.paygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:13px 15px 0}
+.pay{border:1px solid #dfe8e2;border-radius:9px;padding:9px;text-align:center;background:#fbfdfb}
+.pay-name{font-size:11px;font-weight:700;color:#01300f;text-transform:uppercase;letter-spacing:.4px}
+.pay-num{font-size:12.5px;font-weight:700;margin:4px 0;word-break:break-all}
+.pay-title{font-size:11px;color:#6b7c72;margin-bottom:6px;line-height:1.9}
+.pay-copy{width:100%;background:#eef5ef;border:1px solid #d6e5d9;color:#1d4b2c;font-size:11px;font-weight:600;padding:2px;border-radius:6px;cursor:pointer;font-family:inherit;line-height:1.9}
+.pay-copy:hover{background:#dcece0}
+.pay-how{margin:11px 15px;background:#fff8e1;border:1px solid #f0dc9c;border-radius:7px;padding:8px 11px;font-size:12px;color:#4a3c0d}
+.fee-card label{margin:0 15px 9px;display:block}
+.fee-card .btn-main{width:calc(100% - 30px);margin:0 15px}
+.fee-card .tiny{padding:0 15px 14px}
+.done{display:none;text-align:center;padding:22px 20px}
+.done.on{display:block}
+.tick{width:50px;height:50px;border-radius:50%;background:#0a6b2e;color:#fff;font-size:25px;line-height:50px;margin:0 auto 10px}
+.done h3{margin:0 0 4px;font-size:17px;color:#01300f;line-height:1.9}
+.done p{margin:0 auto 12px;font-size:12.5px;color:#5b6b62;max-width:420px}
+.appno{display:inline-block;background:#f4f8f4;border:1.5px dashed #0a6b2e;border-radius:8px;padding:7px 22px;font-size:16px;font-weight:700;letter-spacing:1px;color:#01300f;margin-bottom:12px}
+.done .btn-main{max-width:320px;margin:0 auto}
+.foot{text-align:center;padding:16px 0 22px;color:#5b6b62;font-size:12.5px;border-top:1px solid #eef3ef;margin-top:20px}
+.foot p{margin:0 0 2px}
+@media(max-width:560px){
+ .hero h1{font-size:17px}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .grid,.frow,.paygrid,.sc-btns{grid-template-columns:1fr}
+ .segs{grid-template-columns:repeat(8,1fr)}
+ .cmphoto{width:160px;height:200px}
+}
+</style>
+</head>
+<body>
+
+<div class="paper" id="paper">
+
+  <div class="topbar">
+    <div class="wrap topbar-in">
+      <div class="tb-left"><span class="dot"></span> حکومتِ پنجاب</div>
+      <div class="tb-right ur">روزگار اطلاعاتی سیل</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="cmwrap">
+        <!-- apni tasveer yahan lagayen: src="cm.jpg" -->
+        <div class="cmphoto"><img src="01.jpg" alt="مریم نواز شریف"></div>
+        <div class="cmcap ur">وزیرِاعلیٰ پنجاب<br><b>مریم نواز شریف</b></div>
+      </div>
+      <div class="badge ur">سرکاری اطلاع نامہ</div>
+      <h1 class="ur">وزیرِاعلیٰ پنجاب مریم نواز شریف کی جانب سے صوبے بھر کے محکموں میں بے شمار آسامیوں کا اعلان</h1>
+      <p class="quote ur">”نوجوانوں کو روزگار کی فراہمی حکومتِ پنجاب کی اولین ترجیح ہے — ہر اہل فرد کو موقع ملے گا۔“</p>
+      <p class="sub ur">این سی سی آئی اے، ایف آئی اے، واسا، واپڈا، نہر، ایف ڈی اے، ریلوے، اربن یونٹس، سول ڈیفنس، ریسکیو 1122، محکمہ صحت اور دیگر محکمے — 18 سے 40 سال تک کے تمام اہل امیدوار درخواست دے سکتے ہیں۔</p>
+      <div class="stats">
+        <div class="stat"><b>7,000</b><span class="ur">کل آسامیاں</span></div>
+        <div class="stat"><b>14</b><span class="ur">محکمے</span></div>
+        <div class="stat"><b>18–40</b><span class="ur">عمر کی حد</span></div>
+        <div class="stat"><b>8th–16th</b><span class="ur">تعلیم</span></div>
+      </div>
+      <a href="#apply" class="cta ur">اب درخواست دیں ←</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <div class="note ur">
+      <b>ضروری بات:</b> پولیس اور آرمی جیسے مشہور محکمے اپنا اشتہار نہیں دیتے، اسی لیے عام آدمی کو ان کی آسامیوں کا پتہ نہیں چلتا۔ اس صفحے پر صرف وہی محکمے شامل ہیں جن کی آسامیاں بہت کم آتی ہیں اور جن کے اشتہار اکثر نظر نہیں آتے۔ ہر محکمے کے سامنے آسامیوں کی تفصیل دی گئی ہے۔
+    </div>
+
+    <h2 class="sec-h ur">محکمے <small>— آسامیوں کی تفصیل</small></h2>
+    <div class="grid" id="deptGrid"></div>
+
+    <div class="total-row">
+      <span class="ur">آسامیوں کا کل میزان</span>
+      <b>7,000</b>
+    </div>
+
+    <h2 class="sec-h ur">اہلیت <small>— کون درخواست دے سکتا ہے</small></h2>
+    <div class="elig">
+      <div class="erow"><span class="ur">عمر</span><b class="ur">18 سے 40 سال (01-01-2026 کو)</b></div>
+      <div class="erow"><span class="ur">تعلیم</span><b class="ur">8th، میٹرک، انٹرمیڈیٹ (12)، بی اے / بی ایس سی (14)، ایم اے / ایم ایس سی (16)</b></div>
+      <div class="erow"><span class="ur">ڈومیسائل</span><b class="ur">پنجاب</b></div>
+      <div class="erow"><span class="ur">کوٹہ</span><b class="ur">اوپن میرٹ اور پنجاب کوٹے کے مطابق</b></div>
+      <div class="erow"><span class="ur">فیس</span><b class="ur">500 روپے (غیر واپس)</b></div>
+    </div>
+
+    <h2 class="sec-h ur">آسامیاں <small>— جن پر درخواستیں لی جا رہی ہیں</small></h2>
+    <div class="chips ur">
+      <span>ڈرائیور</span><span>سکیورٹی گارڈ</span><span>مالی</span><span>چوکیدار</span><span>نائب قاصد</span><span>جونیئر کلرک</span><span>ڈیٹا انٹری آپریٹر</span><span>اکاؤنٹنٹ</span><span>صفائی</span><span>ہیلپر</span><span>ڈسپیچ رائیڈر</span><span>لیب اٹینڈنٹ</span><span>وارڈ بوائے</span><span>ٹیکنیشن</span><span>بک بائنڈر</span>
+    </div>
+
+    <div id="apply" class="form-card">
+      <div class="fc-head ur">
+        <h3>درخواست کا فارم</h3>
+        <p>تمام معلومات صاف صاف بھریں۔ نیچے اپنا شناختی کارڈ اپ لوڈ کریں۔</p>
+      </div>
+
+      <div class="fbody">
+        <div class="frow">
+          <label><span class="ur">امیدوار کا نام <i>*</i></span><small>Mukammal naam</small><input id="f_name" dir="ltr" placeholder="Mukammal naam"></label>
+          <label><span class="ur">والد کا نام <i>*</i></span><small>Walid ka naam</small><input id="f_father" dir="ltr" placeholder="Walid ka naam"></label>
+        </div>
+
+        <div class="frow">
+          <label><span class="ur">شناختی کارڈ نمبر <i>*</i></span><small>CNIC</small><input id="f_cnic" dir="ltr" inputmode="numeric" placeholder="35202-1234567-8" maxlength="15"></label>
+          <label><span class="ur">تاریخِ پیدائش <i>*</i></span><small>Date of birth</small><input id="f_dob" dir="ltr" type="date"></label>
+        </div>
+
+        <div class="frow">
+          <label><span class="ur">تعلیم <i>*</i></span><small>Taleem</small>
+            <select id="f_edu" dir="ltr">
+              <option value="">— muntakhib karein —</option>
+              <option>8th</option><option>Matric</option><option>Intermediate (12)</option><option>BA / BSc (14)</option><option>MA / MSc (16)</option>
+            </select>
+          </label>
+          <label><span class="ur">موبائل نمبر <i>*</i></span><small>Mobile</small><input id="f_phone" dir="ltr" inputmode="numeric" placeholder="03XXXXXXXXX" maxlength="11"></label>
+        </div>
+
+        <div class="frow">
+          <label><span class="ur">ضلع <i>*</i></span><small>Zila</small>
+            <select id="f_dist" dir="ltr">
+              <option value="">— muntakhib karein —</option>
+              <option>Lahore</option><option>Faisalabad</option><option>Rawalpindi</option><option>Multan</option><option>Gujranwala</option><option>Sialkot</option><option>Bahawalpur</option><option>Sargodha</option><option>Sheikhupura</option><option>Kasur</option><option>Okara</option><option>Sahiwal</option><option>Jhang</option><option>DG Khan</option><option>Rahim Yar Khan</option><option>Muzaffargarh</option><option>Vehari</option><option>Khanewal</option><option>Chiniot</option><option>Nankana Sahib</option><option>Mianwali</option><option>Bhakkar</option><option>Layyah</option><option>Rajanpur</option><option>Toba Tek Singh</option><option>Hafizabad</option><option>Mandi Bahauddin</option><option>Narowal</option><option>Attock</option><option>Chakwal</option><option>Jhelum</option><option>Khushab</option><option>Pakpattan</option><option>Lodhran</option><option>Bahawalnagar</option>
+            </select>
+          </label>
+          <label><span class="ur">آسامی <i>*</i></span><small>Post</small>
+            <select id="f_post" dir="ltr">
+              <option value="">— muntakhib karein —</option>
+              <option>Driver</option><option>Security Guard</option><option>Mali</option><option>Chowkidar</option><option>Naib Qasid</option><option>Junior Clerk</option><option>Data Entry Operator</option><option>Accountant</option><option>Sweeper</option><option>Helper</option><option>Dispatch Rider</option><option>Lab Attendant</option><option>Ward Boy</option><option>Technician</option><option>Book Binder</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="full"><span class="ur">پورا پتہ <i>*</i></span><small>Poora pata</small><textarea id="f_addr" dir="ltr" rows="2" placeholder="Ghar / mohalla, thana, zila"></textarea></label>
+        <label class="full"><span class="ur">تجربہ (اگر ہو)</span><small>Tajurba</small><input id="f_exp" dir="ltr" placeholder="Misal: 3 saal driving, 2 saal security guard"></label>
+
+        <div class="upl">
+          <div class="upl-head ur">شناختی کارڈ اپ لوڈ <i>*</i></div>
+          <p class="upl-sub ur">شناختی کارڈ کا صاف اسکین یا تصویر (jpg / png / pdf)۔ حجم 2 MB تک۔</p>
+          <label class="upl-box" for="f_file">
+            <span class="upl-ico">⇪</span>
+            <b class="ur">دستاویز منتخب کریں</b>
+            <small class="ur">یہاں کلک کریں</small>
+            <input type="file" id="f_file" accept="image/*,.pdf">
+          </label>
+          <div class="upl-prev" id="uplPrev"></div>
+        </div>
+
+        <div class="err" id="errBox"></div>
+
+        <button class="btn-main ur" id="btnUpload">شناختی کارڈ اپ لوڈ کریں اور آگے بڑھیں</button>
+        <p class="tiny ur">آگے بڑھنے سے پہلے اپنی معلومات کا جائزہ لیں۔ غلط معلومات پر درخواست مسترد ہو سکتی ہے۔</p>
+      </div>
+    </div>
+
+    <div class="share-card" id="shareCard">
+      <div class="sc-head">
+        <span class="sc-badge ur">دوسرا مرحلہ</span>
+        <h3 class="ur">یہ لنک 15 افراد کو بھیجیں</h3>
+        <p class="ur">اپنا لنک 15 دوستوں یا رشتہ داروں کو بھیجیں۔ بھیجنے کے بعد فارم جمع کریں — انتظار کرنے کی ضرورت نہیں۔</p>
+      </div>
+
+      <div class="segs" id="segs"></div>
+      <div class="seg-info"><span class="ur" id="segText">0 / 15 افراد کو بھیجا گیا</span><b id="segPct">0%</b></div>
+
+      <div class="sc-btns">
+        <button class="btn-wa ur" id="btnWa">واٹس ایپ پر بھیجیں</button>
+        <button class="btn-ghost ur" id="btnCopy">لنک کاپی کریں</button>
+      </div>
+      <p class="sc-note ur" id="scNote">لنک بھیجنے کے بعد فارم جمع کرائیں۔</p>
+
+      <button class="btn-main locked ur" id="btnSubmit" disabled>فارم جمع کریں ←</button>
+    </div>
+
+    <div class="fee-card" id="feeCard">
+      <div class="fc-head ur">
+        <h3>سرکاری فارم فیس جمع کرائیں</h3>
+        <p>درخواست آگے بھیجنے کے لیے 500 روپے فیس جمع کرانا ضروری ہے۔ نیچے دیے گئے کسی بھی طریقے سے ادائیگی کریں۔</p>
+      </div>
+
+      <div class="fee-amt">
+        <span class="ur">واجب الادا فیس</span>
+        <b>Rs. 500</b>
+      </div>
+
+      <div class="paygrid">
+        <div class="pay">
+          <div class="pay-name">JazzCash</div>
+          <div class="pay-num">0301-98261456</div>
+          <div class="pay-title ur">اکاؤنٹ ٹائٹل: FAKHAR</div>
+          <button class="pay-copy ur" data-copy="030198261456">نمبر کاپی کریں</button>
+        </div>
+        <div class="pay">
+          <div class="pay-name">Easypaisa</div>
+          <div class="pay-num">0301-98261456</div>
+          <div class="pay-title ur">اکاؤنٹ ٹائٹل: فخار</div>
+          <button class="pay-copy ur" data-copy="030198261456">نمبر کاپی کریں</button>
+        </div>
+        <div class="pay">
+          <div class="pay-name">Bank</div>
+          <div class="pay-num">PK00 MEZN 0000 0000 0000</div>
+          <div class="pay-title ur">فخار — میزان بینک</div>
+          <button class="pay-copy ur" data-copy="PK00MEZN000000000000">اکاؤنٹ کاپی کریں</button>
+        </div>
+      </div>
+
+      <div class="pay-how ur">
+        <b>طریقہ:</b> جاز کیش یا ایزی پیسہ ایپ کھولیں ← سینڈ منی ← نمبر لکھیں ← 500 روپے بھیجیں۔ یا بینک اکاؤنٹ میں ٹرانسفر کریں۔ ادائیگی کے بعد نیچے ٹرانزیکشن آئی ڈی (TID) لکھ کر درخواست جمع کرائیں۔
+      </div>
+
+      <label class="full"><span class="ur">ٹرانزیکشن آئی ڈی / TID <i>*</i></span><small>Transaction ID</small><input id="f_tid" dir="ltr" placeholder="Misal: 4021938475"></label>
+      <div class="err" id="errFee"></div>
+
+      <button class="btn-main ur" id="btnPay">فیس جمع کرائی — درخواست بھیجیں</button>
+      <p class="tiny ur">ادائیگی کی تصدیق کے بعد رول نمبر سلپ 24 گھنٹے میں ایس ایم ایس کے ذریعے بھیجی جائے گی۔</p>
+    </div>
+
+    <div class="done" id="doneCard">
+      <div class="tick">✓</div>
+      <h3 class="ur">شکریہ! آپ کی درخواست جمع ہو گئی</h3>
+      <p class="ur" id="doneMsg">آپ کی درخواست محفوظ کر لی گئی ہے۔ اب آپ کو سرکاری پورٹل پر بھیجا جا رہا ہے…</p>
+      <div class="appno" id="appNo">PK-RZ-2026-00000</div>
+      <button class="btn-main ur" id="btnGo">سرکاری پورٹل کھولیں</button>
+      <p class="tiny ur">اگر صفحہ خود نہ کھلے تو اوپر والا بٹن دبائیں۔</p>
+    </div>
+
+    <div class="foot">
+      <p class="ur"><b>پنجاب روزگار اطلاعاتی سیل</b></p>
+      <p class="ur">سرکاری ہیلپ لائن (پنجاب جاب سینٹر — پی آئی ٹی بی): <b dir="ltr">0310-8148900</b></p>
+      <p class="ur">ای میل: <span dir="ltr">jobsonlinesupport@punjab.gov.pk</span></p>
+      <p class="tiny ur">یہ ایک معلوماتی صفحہ ہے۔ اصل اشتہار کی تصدیق متعلقہ محکمے سے کریں۔</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ====== BACKEND (optional) ======
+   Firebase Realtime Database URL yahan lagayein. Khali ho to bhi sab chalta rahega. */
+const DB = "";
+const PORTAL = "https://jobs.punjab.gov.pk";
+
+const DEPTS=[
+ ["NCCIA",312,"Inspector, Clerk, Guard"],["FIA",234,"Constable, Clerk, DEO"],
+ ["WASA",453,"Mali, Helper, Chowkidar"],["WAPDA",620,"Line Helper, Guard, Driver"],
+ ["Nehar (Irrigation)",540,"Beldar, Mali, Chowkidar"],["FDA",380,"Clerk, Naib Qasid, Driver"],
+ ["Railway",700,"Porter, Guard, Technician"],["Urban Units",415,"Sweeper, Helper, DEO"],
+ ["Civil Defence",300,"Guard, Rescue Helper"],["Rescue 1122",650,"Driver, EMT Helper, Attendant"],
+ ["Accountants",260,"Accountant, Jr. Clerk"],["Health Ministry",980,"Ward Boy, Lab Attendant, Driver"],
+ ["Stations",430,"Mali, Sweeper, Guard"],["Others",726,"Naib Qasid, Book Binder, Helper"]
+];
+const g=document.getElementById('deptGrid');
+DEPTS.forEach(d=>{
+  const el=document.createElement('div');el.className='dcard';
+  el.innerHTML='<div><div class="nm">'+d[0]+'</div><div class="pt">'+d[2]+'</div></div><span class="seats">'+d[1]+'</span>';
+  g.appendChild(el);
+});
+
+const segs=document.getElementById('segs');
+for(let i=0;i<15;i++){const s=document.createElement('div');s.className='seg';segs.appendChild(s);}
+
+const errBox=document.getElementById('errBox'),errFee=document.getElementById('errFee');
+const shareCard=document.getElementById('shareCard'),feeCard=document.getElementById('feeCard'),doneCard=document.getElementById('doneCard');
+const btnSubmit=document.getElementById('btnSubmit'),btnUpload=document.getElementById('btnUpload');
+const $=id=>document.getElementById(id);
+let fileOK=false,formData={},refCode=null,shared=false;
+
+(function(){
+  const p=new URLSearchParams(location.search).get('ref');
+  if(p&&DB){
+    const k='opn_'+p;
+    if(!localStorage.getItem(k)){
+      localStorage.setItem(k,'1');
+      fetch(DB+'/refs/'+p+'/opens/'+Date.now()+Math.random().toString(36).slice(2)+'.json',{method:'PUT',body:'1'}).catch(()=>{});
+    }
+  }
+})();
+
+$('f_cnic').addEventListener('input',e=>{
+  let v=e.target.value.replace(/\D/g,'').slice(0,13),out=v;
+  if(v.length>5)out=v.slice(0,5)+'-'+v.slice(5);
+  if(v.length>12)out=v.slice(0,5)+'-'+v.slice(5,12)+'-'+v.slice(12);
+  e.target.value=out;
+});
+$('f_phone').addEventListener('input',e=>{e.target.value=e.target.value.replace(/\D/g,'').slice(0,11);});
+
+$('f_file').addEventListener('change',e=>{
+  const f=e.target.files[0],prev=$('uplPrev');prev.innerHTML='';
+  if(!f){fileOK=false;return;}
+  if(f.size>2*1024*1024){prev.innerHTML='<div class="fn">File 2 MB se bari hai</div>';fileOK=false;return;}
+  fileOK=true;
+  if(f.type.startsWith('image/')){
+    const r=new FileReader();
+    r.onload=ev=>{prev.innerHTML='<img src="'+ev.target.result+'"><div class="fn" style="margin-top:6px">'+f.name+'</div>';};
+    r.readAsDataURL(f);
+  }else prev.innerHTML='<div class="fn">'+f.name+' (PDF)</div>';
+});
+
+function showErr(m){errBox.textContent=m;errBox.classList.add('on');errBox.scrollIntoView({behavior:'smooth',block:'center'});}
+
+btnUpload.addEventListener('click',async()=>{
+  const name=$('f_name').value.trim(),father=$('f_father').value.trim(),
+        cnic=$('f_cnic').value.replace(/\D/g,''),dob=$('f_dob').value,
+        edu=$('f_edu').value,phone=$('f_phone').value,dist=$('f_dist').value,
+        post=$('f_post').value,addr=$('f_addr').value.trim();
+  errBox.classList.remove('on');
+  if(!name)return showErr('امیدوار کا نام لکھیں۔');
+  if(!father)return showErr('والد کا نام لکھیں۔');
+  if(cnic.length!==13)return showErr('شناختی کارڈ نمبر 13 ہندسوں کا ہونا چاہیے۔');
+  if(!dob)return showErr('تاریخِ پیدائش منتخب کریں۔');
+  const age=Math.floor((new Date('2026-01-01')-new Date(dob))/31557600000);
+  if(age<18||age>40)return showErr('عمر 18 سے 40 سال کے درمیان ہونی چاہیے۔ آپ کی عمر: '+age+' سال۔');
+  if(!edu)return showErr('تعلیم منتخب کریں۔');
+  if(phone.length!==11||!phone.startsWith('03'))return showErr('صحیح موبائل نمبر لکھیں (03XXXXXXXXX)۔');
+  if(!dist)return showErr('ضلع منتخب کریں۔');
+  if(!post)return showErr('آسامی منتخب کریں۔');
+  if(!addr)return showErr('پورا پتہ لکھیں۔');
+  if(!fileOK)return showErr('شناختی کارڈ کی دستاویز اپ لوڈ کریں۔');
+
+  formData={name,father,cnic,dob,age,edu,phone,dist,post,addr,exp:$('f_exp').value.trim()};
+  btnUpload.disabled=true;btnUpload.textContent='لنک تیار ہو رہا ہے…';
+  refCode='R'+Math.random().toString(36).slice(2,8).toUpperCase();
+  if(DB){fetch(DB+'/refs/'+refCode+'.json',{method:'PUT',body:JSON.stringify({created:Date.now()})}).catch(()=>{});}
+  shareCard.classList.add('on');
+  shareCard.scrollIntoView({behavior:'smooth',block:'start'});
+  btnUpload.textContent='معلومات محفوظ ہو گئیں ✓';
+  btnUpload.style.background='#5b6b62';
+});
+
+const BASE = location.protocol==='file:' ? 'https://apna-site.netlify.app/' : location.origin+location.pathname;
+const refLink = () => BASE+'?ref='+refCode;
+function shareText(){
+  return `وزیرِاعلیٰ پنجاب مریم نواز شریف کی جانب سے 14 محکموں میں 7000 سے زائد آسامیوں کا اعلان۔ عمر 18 سے 40 سال، تعلیم 8th سے 16th۔ لنک کھول کر درخواست دیں: ${refLink()}`;
+}
